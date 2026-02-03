@@ -1,42 +1,43 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-
-class led
+class Led
 {
+    bool status;  
+
 public:
+    Led(bool s = false) : status(s) {}
 
-void ledblink()
-{
-cout<<"led b,ink\n";
-}
+    void ledblink()
+    {
+        cout << "LED blink\n";
+    }
 
-void ledtoggle()
-{
-cout<<"led toggle\n";
-}
+    void ledtoggle()
+    {
+        status = !status;   // toggle status
+        cout << "LED toggled\n";
+    }
 
-void display(const bool&a)
-{
-if(a)
-cout<<"on\n";
-else
-cout<<" off\n";
-
-}
-
-
+    void display() const
+    {
+        if (status)
+            cout << "LED is ON\n";
+        else
+            cout << "LED is OFF\n";
+    }
 };
 
 int main()
 {
-led obj;
-bool a=true;
+    Led obj(true);   
 
-obj.ledblink();
+    obj.ledblink();
+    obj.display();
 
-obj.ledtoggle();
+    obj.ledtoggle(); 
+    obj.display();
 
-obj.display(a);
-
+    return 0;
 }
+
