@@ -9,16 +9,16 @@ return a;
 
 int main()
 {
-/*int a=10;
+int a=10;
 int &b=a;
-const int &p=func(a);
+const int &m=func(a);
 cout<<func(a)<<endl;
 
 cout<<&a<<" "<<&b<<endl;
-*/
 
-int a=10;
-const int &b=a;
-a=10;
+int p=10;
+const int &q=a;
+p=100;
+//q=200;//b is const reference
 
 }

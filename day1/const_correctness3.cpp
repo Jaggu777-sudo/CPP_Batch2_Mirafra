@@ -3,7 +3,7 @@
 using namespace std;
 const int & display(const int &a)
 {
-
+//a=100;
 return a;
 
 }
@@ -14,12 +14,9 @@ int main()
 int a=10;
 cout<<display(a);
 vector<int>v{1,23,4,5};
-
 for(const auto &x:v)
 {
 cout<<x<<endl;
-
 }
-
 
 }
