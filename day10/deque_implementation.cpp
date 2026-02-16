@@ -47,23 +47,23 @@ class Mydeque{
 		else{
 			if(start_block==0)
 				realloc();
-		start_block--;
-		block_table[start_block]=new int[Block_Size];
-		start_offset=Block_Size-1;
+			start_block--;
+			block_table[start_block]=new int[Block_Size];
+			start_offset=Block_Size-1;
 		}
 		block_table[start_block][start_offset]=val;
 		current_size++;
 	}
 	void pop_back(){
-	if(current_size==0)
-		return;
-	if(end_offset>0)
-	end_offset--;
-	else{
-	end_block--;
-	end_offset=Block_Size-1;
-	}
-	current_size--;
+		if(current_size==0)
+			return;
+		if(end_offset>0)
+			end_offset--;
+		else{
+			end_block--;
+			end_offset=Block_Size-1;
+		}
+		current_size--;
 
 	}
 	int size()const{
@@ -115,6 +115,6 @@ int main(){
 	d.pop_back();
 	d.pop_front();
 	for(int i=0;i<d.size();i++)
-	cout<<d[i]<<" ";
+		cout<<d[i]<<" ";
 
 }

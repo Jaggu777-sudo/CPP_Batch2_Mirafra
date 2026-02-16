@@ -11,7 +11,7 @@ class uniqueptr{
 		~uniqueptr(){
 			delete res;
 		}
-		uniqueptr(uniqueptr& other)=delete;
+		uniqueptr(const uniqueptr& other)=delete;
 		uniqueptr& operator=(const uniqueptr&other)=delete;
 		uniqueptr(uniqueptr&&other)
 		{

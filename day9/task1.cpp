@@ -17,7 +17,7 @@ public:
     }
 
     void read_values(int index, int size, const string& name) {
-        cout << "Reading " << name << " values\n";
+        cout << "Reading " << name << " values"<<endl;
         sizes[index] = size;
         block[index] = new int[size];
 
@@ -34,21 +34,21 @@ public:
         cout << endl;
     }
 
-    /*~Sensor() {
+    ~Sensor() {
         for (int i = 0; i < no_of_blocks; i++) {
             delete[] block[i];
         }
         delete[] block;
         delete[] sizes;
-    }*/
+    }
 };
 
 int main() {
     Sensor s(3);
 
-    s.read_values(0, 5, "Temperature"); // block[0] size 5
-    s.read_values(1, 3, "Humidity");    // block[1] size 3
-    s.read_values(2, 7, "Fuel");        // block[2] size 7
+    s.read_values(0, 5, "Temperature"); 
+    s.read_values(1, 3, "Humidity");    
+    s.read_values(2, 7, "Fuel");        
 
     s.print_values(0, "Temperature");
     s.print_values(1, "Humidity");
